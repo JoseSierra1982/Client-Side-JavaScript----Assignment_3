@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Online Machine</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <h1>Create Your Smoothie</h1>
+
+    <div class="form-container">
+        <form id="smoothie-form" action="/submit-order" method="POST">
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Customer Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="smoothie-base">Please select Your Smoothie Base:</label>
+            <select id="smoothie-base" name="smoothie-base" required>
+                <option value="water">Water</option>
+                <option value="milk">Milk</option>
+                <option value="almond-milk">Almond Milk</option>
+                <option value="juice">Juice</option>
+            </select>
+
+            <label for="size">Choose Size:</label>
+            <select id="size" name="size" required>
+                <option value="small">Small (16oz)</option>
+                <option value="medium">Medium (24oz)</option>
+                <option value="large">Large (32oz)</option>
+            </select>
+
+            <label for="flavor">Choose Your Flavor:</label>
+            <select id="flavor" name="flavor" required>
+                <option value="strawberry">Strawberry</option>
+                <option value="banana">Banana</option>
+                <option value="mango">Mango</option>
+                <option value="blueberry">Blueberry</option>
+                <option value="green">Green (Spinach, Kale)</option>
+            </select>
+
+            <label for="add-ins">Choose Add-ins (optional):</label>
+            <select id="add-ins" name="add-ins" multiple>
+                <option value="protein">Protein</option>
+                <option value="chia-seeds">Chia Seeds</option>
+                <option value="spinach">Spinach</option>
+                <option value="peanut-butter">Peanut Butter</option>
+                <option value="yogurt">Yogurt</option>
+            </select>
+
+            <label for="special-request">Special Request/Notes (optional):</label>
+            <textarea id="special-request" name="special-request" rows="4" placeholder="Any specific requests?"></textarea>
+
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="javascript/smoothie.js"></script>
+
+</body>
+</html>
